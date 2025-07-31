@@ -162,7 +162,7 @@ const drawTicketDetails = (canvas, ctx) => {
   const watermarkCtx = watermarkCanvas.getContext('2d');
   watermarkCtx.font = '8px Arial';
   watermarkCtx.fillStyle = '#94cae0';
-  watermarkCtx.fillText('CR', 5, 12); // 调整文本位置
+  watermarkCtx.fillText('LR', 5, 12); // 调整文本位置
 
   const pattern = ctx.createPattern(watermarkCanvas, 'repeat');
   ctx.fillStyle = pattern;
@@ -305,7 +305,7 @@ const drawTicketDetails = (canvas, ctx) => {
 
   // 仅供报销使用
   ctx.font = '32px SimSun';
-  drawCustomText(ctx, '仅供报销使用', leftOffset, 330);
+  drawCustomText(ctx, '欢迎乘坐兰溪城际铁路', leftOffset, 330);
 
   ctx.font = '40px FangSong';
 
@@ -324,16 +324,15 @@ const drawTicketDetails = (canvas, ctx) => {
   ctx.setLineDash([8, 2]);
   ctx.strokeRect(dashLeft, 380, dashWidth, dashHeight);
   ctx.setLineDash([]);
-  // ctx.fillText('买票请到12306 发货请到95306 中国铁路祝您旅途愉快', 50, 310);
-  const text1 = '报销凭证 遗失不补';
+  const text1 = '乘车凭证 遗失不补';
   const text1Width = getTextWidth(ctx, text1);
-  const text2 = '退票改签时须交回车站';
+  const text2 = '退票改签时须交回省铁车站';
   const text2Width = getTextWidth(ctx, text2);
   drawCustomText(ctx, text1, dashLeft + dashWidth / 2 - text1Width / 2, 408);
   drawCustomText(ctx, text2, dashLeft + dashWidth / 2 - text2Width / 2, 440);
 
   // 二维码，暂时使用 GitHub 链接，车票二维码貌似是一个加密串
-  const qrCodeText = 'https://github.com/FoskyM/train-ticket-generator';
+  const qrCodeText = 'https://www.lanxi.space/';
   const qrCodeWidth = 120;
   const qrCodeOptions = {
     width: qrCodeWidth,
@@ -380,13 +379,13 @@ const drawTicketBack = () => {
   drawTrapezoid(ctx, canvasWidth - 10, canvasHeight * 0.8, protrusionWidth, protrusionHeight, 5, 'right');
 
   ctx.font = '40px SimHei';
-  const text = '报销凭证使用须知';
+  const text = '省铁乘车凭证使用须知';
   const textWidth = getTextWidth(ctx, text);
   const color = [180, 180, 180];
   drawCustomText(ctx, text, canvasWidth / 2 - textWidth / 2, 80, 0, color);
 
   ctx.font = '25px SimSun';
-  const paragraph = '☆购票后如需报销凭证的，应在开车前或乘车日期之日起180日以内(含当日)，持购票时所使用的有效身份证件原件到车站售票窗口、自动售票机领取。☆退票后如需退票费报销凭证，应在办理之日起180天以内(含当日)，持购票时所使用的有效身份证件原件到车站退票窗口领取。☆报销凭证开具后请妥善保管，丢失后将无法办理补办申领手续。☆已领取报销凭证的车票办理改签、退票或退款手续时，须交回报销凭证方可办理。☆报销凭证不能作为乘车凭证使用。☆未尽事宜见《国铁集团铁路旅客运输规程》等有关规定和车站公告。跨境旅客事宜见铁路跨境旅客相关运输组织规则和车站公告。';
+  const paragraph = '☆购票后如需乘车凭证的，应在开车前或乘车日期之日起15日以内(含当日)，持购票时所使用的有效身份证件原件到车站售票窗口、自动售票机领取。☆退票后如需退票费乘车凭证，应在办理之日起15天以内(含当日)，持购票时所使用的有效身份证件原件到车站退票窗口领取。☆乘车凭证开具后请妥善保管，丢失后将无法办理补办申领手续。☆已领取乘车凭证的车票办理改签、退票或退款手续时，须交回乘车凭证方可办理。☆乘车凭证不能作为报销凭证使用。☆未尽事宜见《省铁集团铁路旅客运输规程》等有关规定和车站公告。跨服旅客事宜见铁路跨境旅客相关运输组织规则和车站公告。';
 
   let paragraphs = paragraph.split('☆').filter((p) => p !== '').map((p) => '☆' + p);
   drawParagraph(ctx, paragraphs, 40, 45, 140, 35, canvasWidth - 90, -1, color);
