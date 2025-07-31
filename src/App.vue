@@ -195,7 +195,7 @@ watch(() => ticketInfo.value.isStudent, (value) => {
       <div class="header mb-4">
         <h2 class="text-2xl font-bold">兰溪城际铁路车票生成器</h2>
         <p class="text-sm text-gray-500">
-          本项目仅供学习交流使用。修改自[火车票生成器](https://github.com/FoskyM/train-ticket-generator)。<br/>
+          本项目仅供学习交流使用。在电脑或宽屏设备上使用效果更佳（部分设备可能不会正常加载字体）。<br/>
           图标与车票版式版权归中国铁路及相关集团所有，本项目与其无任何关联。
         </p>
         <div class="text-sm text-gray-500">
@@ -204,7 +204,6 @@ watch(() => ticketInfo.value.isStudent, (value) => {
         <div class="github inline-flex pt-2 gap-1">
           <img src="https://img.shields.io/github/stars/FoskyM/train-ticket-generator.svg" alt="Stars" />
           <img src="https://img.shields.io/github/forks/FoskyM/train-ticket-generator.svg" alt="Forks" />
-          <img src="https://img.shields.io/github/issues/FoskyM/train-ticket-generator.svg" alt="Issues" />
         </div>
       </div>
       
