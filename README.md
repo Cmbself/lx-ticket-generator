@@ -6,14 +6,10 @@
 ![Issues](https://img.shields.io/github/issues/FoskyM/train-ticket-generator.svg)
 
 ## 介绍
-火车票生成器
+由[FoskyM/train-ticket-generator](https://github.com/FoskyM/train-ticket-generator)项目改造而成的Minecraft虚拟世界观（[兰溪轨交](https://www.lanxi.space))城际车票生成器
 
-[预览地址](https://image.fosky.top/projects/ticket/)
-
-目前只做了 蓝票(报销凭证) 的生成（而且有几处 bug 没解决），\
-另外文字磨损效果生成结果不是太好，且性能堪忧，还需要改进。
-
-欢迎大家提交 PR，因为 issue 不一定有时间处理。
+[源项目预览地址](https://image.fosky.top/projects/ticket/) 
+[本项目地址](https://ticket.lanxi.space)
 
 ## 许可证
 
