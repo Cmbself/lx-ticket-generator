@@ -88,7 +88,7 @@ const ticketInfo = ref<TicketData>({
   seatCarriage: '08',
   seatNumber: '08F',
   passengerName: '科蓝',
-  passengerId: '330102200401011234',
+  passengerId: '3339085901',
 
   seatTypeCustom: '二等座',
   checkGate: '18B',
