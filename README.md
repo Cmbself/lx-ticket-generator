@@ -6,7 +6,7 @@
 ![Issues](https://img.shields.io/github/issues/FoskyM/train-ticket-generator.svg)
 
 ## 介绍
-由[FoskyM/train-ticket-generator](https://github.com/FoskyM/train-ticket-generator)项目改造而成的Minecraft虚拟世界观（[兰溪轨交](https://www.lanxi.space))城际车票生成器
+由[FoskyM/train-ticket-generator](https://github.com/FoskyM/train-ticket-generator)项目改造而成的Minecraft虚拟世界观（[兰溪轨交](https://www.lanxi.space)）城际车票生成器
 
 [源项目预览地址](https://image.fosky.top/projects/ticket/) 
 [本项目地址](https://ticket.lanxi.space)
