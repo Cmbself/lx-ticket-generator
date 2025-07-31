@@ -32,12 +32,7 @@ type TicketData = {
 };
 
 const tabs = ref([
-  { label: '蓝票(报销凭证)', key: 'receipt' },
-  { label: '蓝票(5代磁介质实名车票)', key: 'ticket5g' },
-  { label: '蓝票(4代磁介质非实名车票)', key: 'ticket4g'},
-  { label: '红票(3代软质车票)', key: 'ticket3g'},
-  { label: '红票(2代软质一维码车票)', key: 'ticket2g'},
-  { label: '纸板票(1代纸板火车票)', key: 'ticket1g'}
+  { label: '生成（默认样式）', key: 'receipt' }
 ]);
 
 const activeTab = ref('');
@@ -82,20 +77,20 @@ const fieldInfo = ref<any>({
 const ticketInfo = ref<TicketData>({
   id: '32537301731021L088888',
   redId: 'Z160L088888',
-  ticketOffice: '杭州东',
-  startStation: '杭州东',
-  endStation: '北京南',
-  trainNumber: 'G176',
-  date: '2024-10-21',
+  ticketOffice: '滨港',
+  startStation: '滨港',
+  endStation: '锦绣川',
+  trainNumber: 'L1',
+  date: '2025-07-31',
   time: '18:57',
-  price: 623.0,
-  seatType: '二等座',
+  price: 2.0,
+  seatType: '无座',
   seatCarriage: '08',
   seatNumber: '08F',
-  passengerName: '傅四霁',
+  passengerName: '科蓝',
   passengerId: '330102200401011234',
 
-  seatTypeCustom: '二等座始发改签',
+  seatTypeCustom: '二等座',
   checkGate: '18B',
   isStudent: false,
   isDiscount: true,
@@ -198,9 +193,9 @@ watch(() => ticketInfo.value.isStudent, (value) => {
       class="items-center justify-between p-4 rounded-lg bg-white shadow-indigo-50 shadow-md"
     >
       <div class="header mb-4">
-        <h2 class="text-2xl font-bold">火车票生成器</h2>
+        <h2 class="text-2xl font-bold">兰溪城际铁路车票生成器</h2>
         <p class="text-sm text-gray-500">
-          本项目仅供学习交流使用，转载请注明出处，不得用于商业或违法用途。<br />
+          本项目仅供学习交流使用。修改自[火车票生成器](https://github.com/FoskyM/train-ticket-generator)。<br/>
           图标与车票版式版权归中国铁路及相关集团所有，本项目与其无任何关联。
         </p>
         <div class="text-sm text-gray-500">
@@ -292,7 +287,7 @@ watch(() => ticketInfo.value.isStudent, (value) => {
           <TicketReceipt :ticketInfo="ticketInfo" v-if="activeTab == 'receipt'"/>
           <template v-else-if="activeTab == ''">
             <h2 class="text-2xl">
-              请选择车票类型
+              等待用户操作
             </h2>
           </template>
           <template v-else>
