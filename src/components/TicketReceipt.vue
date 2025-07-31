@@ -270,7 +270,7 @@ const drawTicketDetails = (canvas, ctx) => {
   const priceWidth = getTextWidth(ctx, price);
   drawCustomText(ctx, price, leftOffset + 50, topOffset + 215, -2);
   ctx.font = '21px FangSong';
-  drawCustomText(ctx, '元', leftOffset + 42 + priceWidth, topOffset + 210);
+  drawCustomText(ctx, '  LBS', leftOffset + 42 + priceWidth, topOffset + 210);
   ctx.font = '32px SimSun';
   if (props.ticketInfo.isStudent) {
     const studentText = '学';
